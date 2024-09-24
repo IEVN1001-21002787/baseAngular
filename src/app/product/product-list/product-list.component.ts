@@ -1,20 +1,24 @@
 import { Component } from '@angular/core';
+import { IProductos } from '../productos';
+
 
 @Component({
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
   styleUrl: './product-list.component.css'
+  
 })
 export class ProductListComponent {
   imageWidth:number=50;
   imageMargin:number=2;
   muestraImg:boolean=true;
+  listFiter:string='';
   mostrarImagen():void{
     this.muestraImg=!this.muestraImg
   }
   
 
-  productos:any[]=[
+  productos:IProductos[]=[
     {
       "ProductoId":1,
       "Modelo":"Sentra",
