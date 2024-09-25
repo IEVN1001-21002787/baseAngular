@@ -1,0 +1,41 @@
+<!--
+<div>
+    <h1>Sumar dos Numeros</h1>
+    <form [formGroup]="formulario">
+        <div>
+            <label>Número1:</label>
+            <input formControlName="numero1" type="number">
+        </div>
+        <div>
+            <label>Número2:</label>
+            <input formControlName="numero2" type="number">
+        </div>
+ 
+        <button (click)="sumarNumeros()">Sumar</button>
+        <h3>La suma es: {{resultado}}</h3>
+    </form>
+</div>
+-->
+
+<div>
+    <form [formGroup]="formulario" (ngSubmit)="calcularDistancia()">
+      <label for="x1">X 1:</label>
+      <input id="x1" formControlName="x1" type="number">
+      
+      <label for="y1">Y 1:</label>
+      <input id="y1" formControlName="y1" type="number">
+      
+      <label for="x2">X 2:</label>
+      <input id="x2" formControlName="x2" type="number">
+      
+      <label for="y2">Y 2:</label>
+      <input id="y2" formControlName="y2" type="number">
+      
+      <button type="submit">Calcular distancia</button>
+    </form>
+  
+    <div *ngIf="distancia !== 0">
+      <p>La distancia entre los puntos es: {{ distancia }}</p>
+    </div>
+  </div>
+  
